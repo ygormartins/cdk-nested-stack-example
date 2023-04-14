@@ -6,6 +6,7 @@ import * as cdk from "aws-cdk-lib";
 /* ---------- Stacks ---------- */
 import { RegularStackMain } from "@/lib/regular-stack-main";
 import { RegularStackAPI } from "@/lib/regular-stack-api";
+import { NestedStackMain } from "@/lib/nested-stack-main";
 
 const app = new cdk.App();
 
@@ -23,4 +24,13 @@ new RegularStackAPI(app, "RegularStack-API", {
   env: { region: "us-east-1" },
   description: "API resources for RegularStack - not nested",
   main_stack: regular_stack_main,
+});
+
+/* ----------
+ * Nested Stacks
+ * ---------- */
+new NestedStackMain(app, "NestedStack-MAIN", {
+  stackName: "NestedStack-MAIN",
+  env: { region: "us-east-1" },
+  description: "Main stack containing data resources - nested",
 });

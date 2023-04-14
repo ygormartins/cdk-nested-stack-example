@@ -10,7 +10,7 @@ import { Construct } from "constructs";
 import { Role, ServicePrincipal } from "aws-cdk-lib/aws-iam";
 
 /* ---------- Constructs ---------- */
-import { DynamoDBConstruct } from "@/lib/regular-stack-main/constructs/DynamoDB";
+import { DynamoDBConstruct } from "@/lib/nested-stack-main/constructs/DynamoDB";
 
 /* ---------- Interfaces ---------- */
 interface Props {
@@ -35,7 +35,7 @@ export class TodosResource extends Construct {
 
     this.integration_role = new Role(
       this,
-      `IntegrationRole-${props.stack_name}}`,
+      `IntegrationRole-${props.stack_name}`,
       {
         assumedBy: new ServicePrincipal("apigateway.amazonaws.com"),
       }

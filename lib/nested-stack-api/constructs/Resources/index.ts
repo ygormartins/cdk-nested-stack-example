@@ -3,10 +3,10 @@ import { RestApi } from "aws-cdk-lib/aws-apigateway";
 import { Construct } from "constructs";
 
 /* ---------- Constructs ---------- */
-import { DynamoDBConstruct } from "@/lib/regular-stack-main/constructs/DynamoDB";
+import { DynamoDBConstruct } from "@/lib/nested-stack-main/constructs/DynamoDB";
 
 /* ---------- Resources ---------- */
-import { TodosResource } from "@/lib/regular-stack-api/constructs/Resources/todos";
+import { TodosResource } from "@/lib/nested-stack-api/constructs/Resources/todos";
 
 /* ---------- Interfaces ---------- */
 interface Props {
