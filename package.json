@@ -1,0 +1,22 @@
+{
+  "name": "cdk-nested-stack-example",
+  "version": "0.1.0",
+  "bin": {
+    "cdk-nested-stack-example": "bin/cdk-nested-stack-example.js"
+  },
+  "scripts": {
+    "cdk": "cdk"
+  },
+  "devDependencies": {
+    "@types/node": "18.14.6",
+    "aws-cdk": "2.69.0",
+    "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "~4.9.5"
+  },
+  "dependencies": {
+    "aws-cdk-lib": "2.69.0",
+    "constructs": "^10.0.0",
+    "source-map-support": "^0.5.21"
+  }
+}
